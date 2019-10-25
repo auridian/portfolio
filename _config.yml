@@ -1,2 +1,4 @@
 theme: jekyll-theme-minimal
 name: Milo Hooper
+
+permalink: /projects/:year/:month/:day/:title
