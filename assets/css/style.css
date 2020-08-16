@@ -4,10 +4,27 @@
 
 @import "{{ site.theme }}";
 
-#header nav {
+#header_custom nav {
     max-width: 650px;
     margin: 0 auto;
+        margin-top: 0px;
+	margin-right: auto;
+        margin-bottom: 0px;
+    	margin-left: auto;
     padding: 0 10px;
-    background: red;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+    background: transparent;
+    background-color: transparent;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
     margin: 6px auto;
     }
