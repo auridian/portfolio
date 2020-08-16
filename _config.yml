@@ -2,3 +2,4 @@ theme: jekyll-theme-midnight
 name: Milo Hooper
 
 permalink: /projects/:year/:month/:day/:title
+root: /
