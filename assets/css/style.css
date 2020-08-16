@@ -4,7 +4,7 @@
 
 @import "{{ site.theme }}";
 
-#header nav {
+#header_custom nav {
     max-width: 650px;
     margin: 0 auto;
     padding: 0 10px;
