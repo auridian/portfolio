@@ -3,7 +3,11 @@
 } 
 
 p {
- color:white
+ color:white;
+ font-family: "Ubuntu", "Verdana", sans;
+}
+h1,h2,h3,h4,h5,h6 {
+ font-family: "Ubuntu", "Verdana", sans;
 }
 /* Style the header */
 .header {
