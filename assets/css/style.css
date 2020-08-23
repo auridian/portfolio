@@ -61,7 +61,9 @@ p {
 .project img {
   border-radius: 5px 5px 0 0;
 } 
-
+.project h4 {
+ color:white;
+}
  a:link {
   text-decoration: none;
 }
