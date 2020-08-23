@@ -95,10 +95,11 @@ a:active {
   text-decoration: none;
 } 
 
-.projects-container {
- padding: 20px;
+.projects-container { /*projects row*/
  display: flex;
  flex-wrap: wrap;
+ padding: 0 4px;
+
 }
 
 .projects-column {
