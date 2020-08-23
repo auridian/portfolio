@@ -73,7 +73,11 @@ a:visited {
 }
 
 #header a:visited{
- color:snow
+ color:snow;
+}
+
+.container a:visited{
+ color:snow;
 }
 
 a:hover {
