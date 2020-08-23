@@ -1,5 +1,5 @@
  body {
-  background-color: darkgray;
+  background-color: silver;
 } 
 
 p {
@@ -9,7 +9,7 @@ p {
 .header {
   padding: 10px 16px;
   background: #555;
-  color: #f1f1f1;
+  color: #slategray;
 }
 
 /* Page content */
@@ -45,7 +45,7 @@ p {
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
   max-width: 400px;
-  color: #f1f1f1;
+  color: #slategray;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -59,4 +59,20 @@ p {
 } 
 .project img {
   border-radius: 5px 5px 0 0;
+} 
+
+ a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
 } 
