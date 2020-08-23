@@ -2,6 +2,9 @@
   background-color: darkgray;
 } 
 
+p {
+ color:white
+}
 /* Style the header */
 .header {
   padding: 10px 16px;
