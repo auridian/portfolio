@@ -45,7 +45,6 @@ p {
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
   max-width: 400px;
-  color: slategray;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -56,6 +55,8 @@ p {
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+  background-color: slategray;
+
 } 
 .project img {
   border-radius: 5px 5px 0 0;
@@ -67,6 +68,10 @@ p {
 
 a:visited {
   text-decoration: none;
+}
+
+#header a:visited{
+ color:snow
 }
 
 a:hover {
