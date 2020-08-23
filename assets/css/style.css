@@ -45,6 +45,7 @@ p {
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
   max-width: 400px;
+  color: #f1f1f1;
 }
 
 /* On mouse-over, add a deeper shadow */
