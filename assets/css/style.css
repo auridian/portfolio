@@ -21,3 +21,14 @@
 .sticky + .content {
   padding-top: 102px;
 } 
+#header ul{
+  list-style: none;
+}
+#header li{
+  display: inline;
+  color: lime;
+}
+
+#my_name {
+ color: green;
+}
