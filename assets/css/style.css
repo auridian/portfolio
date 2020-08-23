@@ -1,4 +1,8 @@
- /* Style the header */
+ body {
+  background-color: darkgray;
+} 
+
+/* Style the header */
 .header {
   padding: 10px 16px;
   background: #555;
