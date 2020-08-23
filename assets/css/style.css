@@ -52,6 +52,8 @@ h1,h2,h3,h4,h5,h6 {
   float:left;
   padding:20px;
   border: 2px solid slategray;
+  background-color: slategray;
+
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -62,7 +64,6 @@ h1,h2,h3,h4,h5,h6 {
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
-  background-color: slategray;
 
 } 
 .project img {
