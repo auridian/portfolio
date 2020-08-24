@@ -43,44 +43,40 @@ function myFunction() {
 
 
     <div class="wrapper">
-
+    <div class="project_page">
       <h3 class="project_title">Benevolent Courier: A Practical Solution to Delayed Mailman Lists</h3>
       
-      <p class="project_text">MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood). 
+      <p>MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood). 
         </p>
-      <p class="project_text">The reuse list is for people giving away various things: computers, clothes, and miscellaneous goods of varying quality are listed there, either with a listed location (commonly called a reuse pile) or a note to contact the original poster to claim the item. The free-foods list is similar, but more commonly just lists the location and food type so that people can come take leftovers from events that all-too-often overorder on catering.
+      <p>The reuse list is for people giving away various things: computers, clothes, and miscellaneous goods of varying quality are listed there, either with a listed location (commonly called a reuse pile) or a note to contact the original poster to claim the item. The free-foods list is similar, but more commonly just lists the location and food type so that people can come take leftovers from events that all-too-often overorder on catering.
         Both of these mailing lists have lately been suffering from the same issue: they are large, laggy, and under moderation. As a result, emails are delivered up to several hours after they were actually sent to the list. Imagine seeing an email announcing the presence of a large quantity of pizza around dinnertime, and in a building quite close to you, then running over to get some, only to see the cardboard remnants of what was in fact a lunchtime posting, all gone!
         </p>
-      <p class="project_text">One lucky aspect of these large lists enables the determined to overcome this unfortunate state of affairs: these are GNU Mailman lists!
+      <p>One lucky aspect of these large lists enables the determined to overcome this unfortunate state of affairs: these are GNU Mailman lists!
         </p>
-      <p class="project_text">Mailman lists are archived in real time online. Time-stamped. In order of posting.
+      <p>Mailman lists are archived in real time online. Time-stamped. In order of posting.
         </p>
-      <p class="project_text">A Python web-scraper using the requests and Beautiful Soup libraries enables one to access this archive by logging in to see the same information that anyone on these lists can see.
+      <p>A Python web-scraper using the requests and Beautiful Soup libraries enables one to access this archive by logging in to see the same information that anyone on these lists can see.
         </p>
-      <p class="project_text">If you check this at an interval of, say, every thirty seconds, and then forward the email contents of new emails to a high-speed Moira list (MIT's other type of mailing list, which happens to not suffer the same problems as Mailman, but also does not post archives of emails public to list members), suddenly your several-hours delays are reduced to a maximum of thirty seconds. 
+      <p>If you check this at an interval of, say, every thirty seconds, and then forward the email contents of new emails to a high-speed Moira list (MIT's other type of mailing list, which happens to not suffer the same problems as Mailman, but also does not post archives of emails public to list members), suddenly your several-hours delays are reduced to a maximum of thirty seconds. 
         </p>
-      <p class="project_text">There were a decent amount of strange issues that arose in creating this. The weirdest was that while most emails showed up in the archive normally, others often looked like this:
+      <p>There were a decent amount of strange issues that arose in creating this. The weirdest was that while most emails showed up in the archive normally, others often looked like this:
         </p>
       <div class="project_image">
         <img src="/assets/b64.png" class="project_image"></img>
-        <p class="project_image_text">Garbled nonsense.
+	    <p>Garbled nonsense.</p>
       </div>
-      <p class="project_text">After trying many different decoding schemes I finally discovered that this is base64 encoded text -- certainly not what you would expect a text email to be archived in! And especially when most emails are stored in plaintext. 
+      <p>After trying many different decoding schemes I finally discovered that this is base64 encoded text -- certainly not what you would expect a text email to be archived in! And especially when most emails are stored in plaintext. 
         </p>
-      <p class="project_text">Observing which emails were garbled (and their ungarbled contents) showed that it was the emails with attachments that were largely getting encoded. 
+      <p>Observing which emails were garbled (and their ungarbled contents) showed that it was the emails with attachments that were largely getting encoded. 
         </p>
-      <p class="project_text">This also leads to another benefit of being able to access this archive: you get access to the URLs for scrubbed images and can link to (or attach) them rather than go through the cumbersome Mailman interface to view them.
+      <p>This also leads to another benefit of being able to access this archive: you get access to the URLs for scrubbed images and can link to (or attach) them rather than go through the cumbersome Mailman interface to view them.
         </p>
-      <p class="project_text">That would have been the next step for Benevolent Courier. Unfortunately, the list and script became useless as of March 2020 due to the global pandemic shutting down all events and university activity -- no free food or reuse list activity would follow for many months, unlikely to return to regular activity before the end of the pandemic.
+      <p>That would have been the next step for Benevolent Courier. Unfortunately, the list and script became useless as of March 2020 due to the global pandemic shutting down all events and university activity -- no free food or reuse list activity would follow for many months, unlikely to return to regular activity before the end of the pandemic.
         </p>
-      <p class="project_text">Additionally, the github repository for this code has been made private due to privacy concerns.
+      <p>Additionally, the github repository for this code has been made private due to privacy concerns.
         </p>
-     
-  	</div> <!-- end of the float container-->
-	      
-      </section>
-
-    </div>
+     </div>
+  </div> 
   </body>
 </html> 
 
