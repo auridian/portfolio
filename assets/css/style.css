@@ -86,8 +86,8 @@ h1,h2,h3,h4,h5,h6 {
  border:2px solid slategray;
 }
 
-.project_image_text{
- color:white;
+.project_image p{
+ color:red;
 }
  a:link {
   text-decoration: none;
