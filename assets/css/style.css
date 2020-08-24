@@ -113,6 +113,11 @@ a:active {
   text-decoration: none;
 } 
 
+.project-title{
+ text-align:center;
+ color:white;
+}
+
 .projects-container { /*projects row*/
  display: flex;
  flex-wrap: wrap;
