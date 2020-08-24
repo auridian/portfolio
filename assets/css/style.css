@@ -71,6 +71,24 @@ h1,h2,h3,h4,h5,h6 {
 .project h4 {
  color:white;
 }
+
+.project_text{
+ max-width: 75%;
+}
+
+.project_image div{
+ margin-left: auto;
+ margin-right: auto;
+ max-width:75%;
+ background-color:slategray;
+ border-radius:5px;
+ padding:20px;
+ border:2px solid slategray;
+}
+
+.project_image_text{
+ color:white;
+}
  a:link {
   text-decoration: none;
 }
@@ -114,7 +132,7 @@ a:active {
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .projects-column {
     flex: 50%;
     max-width: 50%;
