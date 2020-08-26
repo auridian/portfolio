@@ -70,8 +70,14 @@ color:white;
 	float:none;
 	}
 }
-.about_container div{
+.about_container p{
 	/*idk something here for about me page... not super important*/
+	max-width:60%;
+	font-size:large;
+	text-align:justify;
+	text-justify:inter-word;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 #my_name {
@@ -113,17 +119,25 @@ color:white;
  width: 1200px;
  margin-left: auto;
  margin-right: auto;
+ margin-top: 10px;
  background-color:darkslategray;
  border-radius: 5px; /* 5px rounded corners */
  border: 2px solid darkslategray;
 
 }
 
-.project_page p{
-	margin:5px;
+.project_page p,li{
+	max-width:60%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15px;
 	text-align:justify;
 	text-justify:inter-word;
+	font-size:large;
+	color:white;
+	font-family: "Ubuntu", "Verdana", sans;
 }
+
 
 .project_image{
  margin-left: auto;
@@ -143,6 +157,7 @@ color:white;
  text-align:center;
  font-style:italic;
  
+ 
 }
  a:link {
   text-decoration: none;
@@ -159,7 +174,12 @@ a:visited {
 .container a:visited{
  color:snow;
 }
+.project_page a:link{
+color:dodgerblue;}
 
+.project_page a:visited{
+color:dodgerblue;
+}
 a:hover {
   text-decoration: none;
 }
