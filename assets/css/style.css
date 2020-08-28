@@ -83,6 +83,9 @@ color:white;
 #my_name {
  color: white;
  text-align:center;
+ width:200px;
+ margin-right:auto;
+ margin-left:auto;
 }
  .project {
   /* Add shadows to create the "card" effect */
