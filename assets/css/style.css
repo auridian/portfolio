@@ -1,5 +1,5 @@
  body {
-  background-color: slategray;
+  background-color: #485c73;
 } 
 
 p {
@@ -12,8 +12,9 @@ h1,h2,h3,h4,h5,h6 {
 /* Style the header */
 .header {
   overflow:hidden;
-  padding: 20px 10px;
-  background-color:darkslategray;
+  padding: 10px 10px;
+  background-color:#303030;
+  border-radius:15px;
 }
 
 /* Page content */
@@ -49,12 +50,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .header a:hover {
-background-color: #ddd;
+background-color: #909090;
 color:black;
 }
 
 .header a.active{
-background-color:slategray;
+background-color:#485c73;
 color:white;
 }
 .header-right{
@@ -80,13 +81,45 @@ color:white;
 	margin-right:auto;
 }
 
+.essay_container{
+padding:0px;
+text-align:center;
+justify-content:center;
+font-size:large;
+margin-left:auto;
+margin-right:auto;
+max-width:60%;
+background-color:#303030;
+border-radius:15px
+}
+
+.essay_container h2{
+	color:white;
+
+}
+
+.writing_container{
+	justify-content:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.writing_container p{
+	font-size: large;
+	text-align: center;
+	text-justify: inter-word;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
 #my_name {
  color: white;
  text-align:center;
  width:200px;
  margin-right:auto;
- margin-left:auto;
-}
+ float:left;
+ }
  .project {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -94,8 +127,8 @@ color:white;
   border-radius: 5px; /* 5px rounded corners */
   max-width: 400px;
   padding:20px;
-  border: 2px solid darkslategray;
-  background-color: darkslategray;
+  border: 2px solid #303030;
+  background-color: #303030;
 
 }
 
@@ -111,6 +144,7 @@ color:white;
 } 
 .project img {
   border-radius: 5px 5px 0 0;
+
 } 
 .project h4 {
  color:white;
@@ -123,7 +157,7 @@ color:white;
  margin-left: auto;
  margin-right: auto;
  margin-top: 10px;
- background-color:darkslategray;
+ background-color:#303030;
  border-radius: 5px; /* 5px rounded corners */
  border: 2px solid darkslategray;
 
@@ -223,6 +257,13 @@ a:active {
     flex: 50%;
     max-width: 50%;
   }
+  .essay_container{
+	max-width:90%;
+  }
+  .writing_container{
+	max-width:80%;
+	}
+
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -231,6 +272,12 @@ a:active {
     flex: 100%;
     max-width: 100%;
   }
+  .essay_container{
+	max-width:100%;
+  }
+  .writing_container{
+	max-width:95%;
+	}
 } 
 
 @media screen and (max-width: 1000px) {
@@ -254,4 +301,11 @@ a:active {
 	 margin-right: auto;
 	 max-width:100%;
 	}
+  .essay_container{
+	max-width:90%;
+  }
+  .writing_container{
+	max-width:90%;
+	}
+
 } 
