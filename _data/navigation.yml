@@ -1,9 +1,9 @@
 main:
-  -title: "Projects"
-   url: /
-  -title: "About"
-   url: /about
-  -title: "Resume"
-   url: /assets/MiloHooperResume.pdf
-  -title: "CV"
-   url: /assets/MiloHooperCV.pdf
+  - title: "Projects"
+   url: milohooper.com
+  - title: "About"
+   url: milohooper.com/about
+  - title: "Resume"
+   url: milohooper.com/assets/MiloHooperResume.pdf
+  - title: "CV"
+   url: milohooper.com/assets/MiloHooperCV.pdf
