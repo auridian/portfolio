@@ -9,8 +9,6 @@ header:
 	teaser: /assets/thumbnails/thumb.b64.png
 ---
 
-## Benevolent Courier: A Practical Solution to Mailman List Delays
-
 
 MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood).
 

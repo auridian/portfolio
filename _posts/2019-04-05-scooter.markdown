@@ -9,7 +9,7 @@ header:
 	teaser: /assets/thumbnails/thumb.scooter.jpg
 ---
 
-
+## Super E100 Electric Scooter
 
 What happens when you take a Razor E100 electric scooter, rip out everything but the red metal frame and the front wheel, and fill it with much higher-quality components?
 
