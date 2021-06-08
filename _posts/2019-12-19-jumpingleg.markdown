@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Benevolent Courier: A Practical Solution to Mailman List Delays"
+title:  "Robotic Leg Jumping Experiment"
 date:   2019-12-19 08:17:50 -0400
 categories: projects
 permalink: /:categories/jumpingleg
