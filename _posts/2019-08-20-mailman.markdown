@@ -3,10 +3,10 @@ layout: single
 title:  "Benevolent Courier: A Practical Solution to Mailman List Delays"
 date:   2019-04-05 08:17:50 -0400
 categories: projects
-permalink: /projects/mailman
+permalink: /:categories/mailman
 
 header:
-	teaser: /assets/thumbnails/thumb.b64.png
+ teaser: /assets/thumbnails/thumb.b64.png
 ---
 
 ## Benevolent Courier: A Practical Solution to Mailman List Delays

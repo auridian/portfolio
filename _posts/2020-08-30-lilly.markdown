@@ -1,39 +1,40 @@
 ---
 layout: single
-title:  "Benevolent Courier: A Practical Solution to Mailman List Delays"
-date:   2019-04-05 08:17:50 -0400
+title:  "Summer Internship at Eli Lilly"
+date:   2020-08-30 08:17:50 -0400
 categories: projects
-permalink: /projects/mailman
+permalink: /:categories/lilly
 
 header:
-	teaser: /assets/thumbnails/thumb.b64.png
+ teaser: /assets/thumbnails/thumb.lilly.png
 ---
 
+##Summer Internship at Eli Lilly
 
-MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood).
 
-The reuse list is for people giving away various things: computers, clothes, and miscellaneous goods of varying quality are listed there, either with a listed location (commonly called a reuse pile) or a note to contact the original poster to claim the item. The free-foods list is similar, but more commonly just lists the location and food type so that people can come take leftovers from events that all-too-often overorder on catering. Both of these mailing lists have lately been suffering from the same issue: they are large, laggy, and under moderation. As a result, emails are delivered up to several hours after they were actually sent to the list. Imagine seeing an email announcing the presence of a large quantity of pizza around dinnertime, and in a building quite close to you, then running over to get some, only to see the cardboard remnants of what was in fact a lunchtime posting, all gone!
+This summer, I worked a medical device engineering internship with Eli Lilly at their Cambridge Innovation Center. Virtually, that is.
 
-One lucky aspect of these large lists enables the determined to overcome this unfortunate state of affairs: these are GNU Mailman lists!
+This was a very positive work experience for me, despite the challenges of virtualization. It also started off in an amusing way.
 
-Mailman lists are archived in real time online. Time-stamped. In order of posting.
+On the first day, I was scheduled to receive my work laptop in the mail. Instead of the UPS deliveryman ringing my doorbell, or knocking, he decided to carry on with his day and drive right past my house without even attempting to notify me of his presence. Instead a single note was left on the front door, saying "We missed you!" and telling me they'd try again tomorrow.
 
-A Python web-scraper using the requests and Beautiful Soup libraries enables one to access this archive by logging in to see the same information that anyone on these lists can see.
+Now, I had been eagerly awaiting this laptop. I wasn't about to let this UPS driver get away! I called UPS customer service and attempted to get a reroute -- not allowed by company policy. Pfft.
 
-If you check this at an interval of, say, every thirty seconds, and then forward the email contents of new emails to a high-speed Moira list (MIT's other type of mailing list, which happens to not suffer the same problems as Mailman, but also does not post archives of emails public to list members), suddenly your several-hours delays are reduced to a maximum of thirty seconds.
+I then remembered: I had map-based tracking on the UPS webpage for my tracking number. Since I hadn't closed the page, it showed where the driver was going - even after passing my house! In fact, he was making deliveries at the Harvard Business School, not too far away from where I lived.
 
-There were a decent amount of strange issues that arose in creating this. The weirdest was that while most emails showed up in the archive normally, others often looked like this: 
+Naturally, I proceeded to jump on my bike, sailing across Allston and arriving at HBS. It helped that this was still relatively early into the never-ending pandemic, so there were very few cars on the streets. I didn't know where he was within HBS, but I figured that there were only so many common exits. I sat and waited in one of them and sure enough, a UPS truck turned a corner and approached me after only a few minutes of waiting. I stood in front of it, gesturing for him to stop.
 
-![Base64 Nonsense](/assets/b64.png)
+I got my laptop.
 
-Garbled nonsense.
+Anyhow, I unfortunately cannot say too much about my work with Eli Lilly. It was quite interesting and definitely helped me to maintain my interest in working in or adjacent to the medical device industry. But I did sign what is effectively an NDA.
 
-After trying many different decoding schemes I finally discovered that this is base64 encoded text -- certainly not what you would expect a text email to be archived in! And especially when most emails are stored in plaintext.
+I am allowed to share these two slides of content, in addition to a slide's worth of resume bullet points (see my resume for those).
 
-Observing which emails were garbled (and their ungarbled contents) showed that it was the emails with attachments that were largely getting encoded.
 
-This also leads to another benefit of being able to access this archive: you get access to the URLs for scrubbed images and can link to (or attach) them rather than go through the cumbersome Mailman interface to view them.
+![Pump Details](/projects/lilly/large.png)
 
-That would have been the next step for Benevolent Courier. Unfortunately, the list and script became useless as of March 2020 due to the global pandemic shutting down all events and university activity -- no free food or reuse list activity would follow for many months, unlikely to return to regular activity before the end of the pandemic.
+*Pump for drug delivery device slide*
 
-Additionally, the github repository for this code has been made private due to privacy concerns. 
+![Electronic Details](/projects/lilly/elec.png)
+
+*Electronics for drug delivery device slide*

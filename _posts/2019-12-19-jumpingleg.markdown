@@ -1,39 +1,65 @@
 ---
 layout: single
 title:  "Benevolent Courier: A Practical Solution to Mailman List Delays"
-date:   2019-04-05 08:17:50 -0400
+date:   2019-12-19 08:17:50 -0400
 categories: projects
-permalink: /projects/mailman
+permalink: /:categories/jumpingleg
 
 header:
-	teaser: /assets/thumbnails/thumb.b64.png
+ teaser: /assets/thumbnails/thumb.glamourshot.png
 ---
 
+##"Telescoping Timmy" or the Robotic Leg Jumping Experiment
 
-MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood).
 
-The reuse list is for people giving away various things: computers, clothes, and miscellaneous goods of varying quality are listed there, either with a listed location (commonly called a reuse pile) or a note to contact the original poster to claim the item. The free-foods list is similar, but more commonly just lists the location and food type so that people can come take leftovers from events that all-too-often overorder on catering. Both of these mailing lists have lately been suffering from the same issue: they are large, laggy, and under moderation. As a result, emails are delivered up to several hours after they were actually sent to the list. Imagine seeing an email announcing the presence of a large quantity of pizza around dinnertime, and in a building quite close to you, then running over to get some, only to see the cardboard remnants of what was in fact a lunchtime posting, all gone!
+In the fall of my junior year at MIT (2019), I took 2.74, or Bio-Inspired Robotics. It was a very interesting course.
 
-One lucky aspect of these large lists enables the determined to overcome this unfortunate state of affairs: these are GNU Mailman lists!
+It taught me about impedance control, about how to practically mimic spring-mass-damper like behavior out of, say, a two-motor driven appendage. You could create, depending on what use case you wanted, behavior to mimic those k-m-b values, using this impedance control.
 
-Mailman lists are archived in real time online. Time-stamped. In order of posting.
+We also learned a lot about the various ways you could mimic legs, how different gaits work in two versus four legged animals, and how one might go about recreating that type of behavior in a legged robot.
 
-A Python web-scraper using the requests and Beautiful Soup libraries enables one to access this archive by logging in to see the same information that anyone on these lists can see.
+In the second half of the course, we had group projects, where the goal was: find a question you want to answer, design an experiment to answer that question, and build out the hardware and perform the work needed to get the answer.
 
-If you check this at an interval of, say, every thirty seconds, and then forward the email contents of new emails to a high-speed Moira list (MIT's other type of mailing list, which happens to not suffer the same problems as Mailman, but also does not post archives of emails public to list members), suddenly your several-hours delays are reduced to a maximum of thirty seconds.
+My group ended up creating a robotic jumping leg that we've affectionately come to know as Telescoping Timmy.
 
-There were a decent amount of strange issues that arose in creating this. The weirdest was that while most emails showed up in the archive normally, others often looked like this: 
+The question that we wanted to answer was: what is the optimal ratio of leg section lengths (thigh versus calf), and how does the power distribution between those muscles play into the maximum jumping height?
 
-![Base64 Nonsense](/assets/b64.png)
+The physical apparatus was relatively simple, though tolerance issues and keeping an easy way to connect electronics are both topics that should never be forgotten, as we learned the hard way.
 
-Garbled nonsense.
 
-After trying many different decoding schemes I finally discovered that this is base64 encoded text -- certainly not what you would expect a text email to be archived in! And especially when most emails are stored in plaintext.
 
-Observing which emails were garbled (and their ungarbled contents) showed that it was the emails with attachments that were largely getting encoded.
+![Glamour Shot](/projects/jumpingleg/glamourshot.png)
 
-This also leads to another benefit of being able to access this archive: you get access to the URLs for scrubbed images and can link to (or attach) them rather than go through the cumbersome Mailman interface to view them.
+*Glamour shot, because why not?*
 
-That would have been the next step for Benevolent Courier. Unfortunately, the list and script became useless as of March 2020 due to the global pandemic shutting down all events and university activity -- no free food or reuse list activity would follow for many months, unlikely to return to regular activity before the end of the pandemic.
+We had a six-foot telescoping boom extended out from a definitely-not-janky wooden frame (hey, at least it had plenty of bracing). This boom allowed the robotic leg to feel whatever amount of weight we desire; a counterweight whose appearance conspicuously coincided with the temporary disappearance of one of the dorm weight room's weights allowed this. The leg itself was comprised of the two motors themselves at the actual physical positions of the hip and knee joints, connected to adapters and joined by telescoping linkages that would screw together into one of four possible leg section lengths between fully collapsed and fully extended.
 
-Additionally, the github repository for this code has been made private due to privacy concerns. 
+![Apparatus](/projects/jumpingleg/apparatus.jpg)
+
+*The setup itself, with its artisanal wooden base frame.*
+
+The boom additionally constrained the leg roughly to the vertical axis; we didn't really care about how *far* it could jump (we originally were interested in that question as well as height, but decided to reduce our scope when we realized how difficult it would be to get one axis working for testing).
+
+To test the distribution of torque contributed by different muscles in the legs, we implemented that in the K64F FRDM boards (think fancy Arduinos with Arm processors that you can program through mbed). The amount of current allowed into each motor allowed an approximation of the amount of power contributed by each leg muscle.
+
+The controller we used to drive this system was a hybrid position-torque controller; the position control came first to "crouch" the leg, and the torque controller generated an optimal torque trajectory for each muscle group over the course of the jump.
+
+<video style="margin-left:auto;margin-right:auto;display:block;" controls="" width="600" height="1200">
+    <source src="/projects/jumpingleg/jump.mp4" type="video/mp4">
+</video>
+
+*An amusing video of our robot learning to jump.*
+
+After much tweaking of parameters and frustration with various electromechanical issues, we finally began to produce consistent jumps, and were able to take data to see if there was a trend -- and there was!
+
+![Data](/projects/jumpingleg/parabolic.png)
+
+*Plot of maximal jump height vs leg length ratio.*
+
+We ended up finding that the proportion of thigh length tended to increase your overall maximum jump height; that the leg ratio extremities drastically reduced performance; that there was no clear trend in knee or thigh muscle group power dominance; and finally, that the hypothetical optimal leg ratio was with a thigh that was 57% of your overall leg length, with the calf being 43%. However, you will note that the data is of course noisy; the only surefire conclusion we can draw from this is that near-equivalent (an 0.8-1.2 ratio range) leg lengths will tend to produce higher jumps for a given torque distribution.
+
+Of course, no project would be complete without its own special set of implementation challenges. In our case, we spent a very long time working on the MATLAB simulations to try to get our virtual leg to, for lack of better words, stop doing acrobatics!
+
+Check out our final poster [here](/projects/jumpingleg/poster.pdf) (PDF), which has a bunch of additional data and analysis!
+
+

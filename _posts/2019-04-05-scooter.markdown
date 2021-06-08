@@ -3,10 +3,10 @@ layout: single
 title:  "Super E100 Electric Scooter"
 date:   2019-04-05 08:17:50 -0400
 categories: projects
-permalink: /projects/scooter
+permalink: /:categories/scooter
 
 header:
-	teaser: /assets/thumbnails/thumb.scooter.jpg
+ teaser: /assets/thumbnails/thumb.scooter.jpg
 ---
 
 ## Super E100 Electric Scooter

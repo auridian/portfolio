@@ -1,39 +1,59 @@
 ---
 layout: single
-title:  "Benevolent Courier: A Practical Solution to Mailman List Delays"
-date:   2019-04-05 08:17:50 -0400
+title:  "Perigel"
+date:   2020-05-30 08:17:50 -0400
 categories: projects
-permalink: /projects/mailman
+permalink: /:categories/perigel
 
 header:
-	teaser: /assets/thumbnails/thumb.b64.png
+ teaser: /assets/thumbnails/thumb.perigel.jpg
 ---
 
+##Perigel: Pericardial Adhesion Barrier Concept
 
-MIT has several incredibly useful mailing lists for those seeking to live frugally. The two of primary interest are reuse@ and free-foods@ (formerly free-food/freefood).
+In the Spring of 2020 at MIT, I took 2.782, or *Design of Medical Devices and Implants.*
 
-The reuse list is for people giving away various things: computers, clothes, and miscellaneous goods of varying quality are listed there, either with a listed location (commonly called a reuse pile) or a note to contact the original poster to claim the item. The free-foods list is similar, but more commonly just lists the location and food type so that people can come take leftovers from events that all-too-often overorder on catering. Both of these mailing lists have lately been suffering from the same issue: they are large, laggy, and under moderation. As a result, emails are delivered up to several hours after they were actually sent to the list. Imagine seeing an email announcing the presence of a large quantity of pizza around dinnertime, and in a building quite close to you, then running over to get some, only to see the cardboard remnants of what was in fact a lunchtime posting, all gone!
+Sounds about like what I'd be into.
 
-One lucky aspect of these large lists enables the determined to overcome this unfortunate state of affairs: these are GNU Mailman lists!
+It was an excellent class that maintained quality through the generally rough transition to online learning due to the Great Kick Out of March 2020 with the rise of the coronavirus.
 
-Mailman lists are archived in real time online. Time-stamped. In order of posting.
+For the second half of the term, we had to do a group project; my team ended up designing a novel formulation for a pericardial adhesion barrier, which we named Perigel.
 
-A Python web-scraper using the requests and Beautiful Soup libraries enables one to access this archive by logging in to see the same information that anyone on these lists can see.
+In order to explain what Perigel is, I must first briefly cover the anatomical context and the clinical problem that we sought to address.
 
-If you check this at an interval of, say, every thirty seconds, and then forward the email contents of new emails to a high-speed Moira list (MIT's other type of mailing list, which happens to not suffer the same problems as Mailman, but also does not post archives of emails public to list members), suddenly your several-hours delays are reduced to a maximum of thirty seconds.
+-The pericardium is a double-walled, fluid-filled sac that surrounds the myocardial wall -- your heart's muscle layer.
+-It fulfills a protective and lubricating role for the heart. It provides a first line of defense for the heart from lung infections. Additionally, it helps keep your heart in place in the body.
+-It has two major regions: the outer fibrous region, and the inner serous region (which is itself divided into the parietal and visceral regions, and contains the pericardial fluid that is essential to maintaining heart lubrication).
+-The face of the inner pericardium is coated in a mesothelial cell layer ("PMCs"), providing a slick barrier between the fibrous inside of the pericardium and the fluid filled region.
 
-There were a decent amount of strange issues that arose in creating this. The weirdest was that while most emails showed up in the archive normally, others often looked like this: 
+One thing that can go wrong with the pericardium is when a patient undergoes a heart surgery (coronary bypass, for instance).
 
-![Base64 Nonsense](/assets/b64.png)
+When open-heart surgeries such as coronary bypass are performed, and the pericardium is damaged / sliced into in order to access the heart within for the necessary surgery, the result is that the patient must heal their pericardium in addition to everything else after their thoracic cavity is resealed.
 
-Garbled nonsense.
+The conditions created by the surgical procedure are ripe for the proliferation of fibrous outgrowth. First, the PMCs wall is punctured: this sends PMCs flying into the pericardial fluid, and killing others. The fibrous surface inside of the PMC layer is thus exposed. Additionally, as there is an ample blood supply rushing in toward the wound (we are next to the heart after all!), one will see a buildup of platelets and fibrin. The body sends inflammatory cells which will seek to repair the damage with, you guessed it, fibrous scar tissue! 
 
-After trying many different decoding schemes I finally discovered that this is base64 encoded text -- certainly not what you would expect a text email to be archived in! And especially when most emails are stored in plaintext.
+*On the chemical side of things: the loss of the PMCs at the damaged site will inhibit the expression of glycoprotein-4 (PRG4), an inflammatory inhibitor against myofibroblasts, the common type one would witness acting in this pathology. Additionally, in the process of the surgical incision, cyclooxygenase enzyme 2 (COX-2) is activated, enabling the production of prostaglandins that signal for increased inflammatory response from the myofibroblasts.*
 
-Observing which emails were garbled (and their ungarbled contents) showed that it was the emails with attachments that were largely getting encoded.
 
-This also leads to another benefit of being able to access this archive: you get access to the URLs for scrubbed images and can link to (or attach) them rather than go through the cumbersome Mailman interface to view them.
+![Formation Pathways](/assets/Adhesion_Formation.jpg)
 
-That would have been the next step for Benevolent Courier. Unfortunately, the list and script became useless as of March 2020 due to the global pandemic shutting down all events and university activity -- no free food or reuse list activity would follow for many months, unlikely to return to regular activity before the end of the pandemic.
+*Depiction of adhesion formation.*
 
-Additionally, the github repository for this code has been made private due to privacy concerns. 
+As you can see, the case of surgical incision into the pericardium truly does create the perfect storm for the creation of fibrous growth. The fibrous outgrowths from the pericardial damage site can spread outward, attaching to the thoracic cavity / chest wall, as well as inward to the myocardial surface.
+
+The proliferation of these adhesions often creates the need for secondary surgeries in postoperative recovery to remove the adhesions a few weeks after the initial procedure. Symptoms of adhesion formation can include difficulty breathing and chest pain. The secondary adhesion-removing surgeries can themselves cause issues, as removing the adhesions is a delicate procedure that can risk catastrophic damage to the lungs and heart, as well as generally more time spent in operation.
+
+Prior adhesion barriers have often not targeted the unique anatomy of the pericardium, instead being repurposed from their original use cases in the abdomen or pelvic regions. Additionally, most prior treatments have only attempted to serve as a physical barrier to prevent adhesions, which unfortunately do little to prevent internal adhesions. 
+
+![Other solutions](/assets/Other_Solutions.jpg)
+
+*Our solution: barrier combined with inhibitor.*
+
+Enter the concept for Perigel. Our thought was, in essence: what if we could design something that served as both a physical barrier *and* as a chemical inhibitor of the inflammatory response? Long story short, we ended up deciding on a bioresorbable spray-on hydrogel that contains drug-eluting nanoparticles with small pellets of indomethacin, a primarily COX-2 inhibiting NSAID. Rather than risk damaging the entire body's ability to heal wounds globally by ingesting an NSAID, we sought to include small doses of the NSAID to be released over the course of a few weeks as the physical barrier is dissolved and absorbed by the body, inhibiting the fibrous growths over several weeks!
+
+If this concept were to work, it could significantly improve patient outcomes, prevent excssive surgeries, and lower overall healthcare costs while improving quality of life and care. 
+
+Read the final project report [here](/assets/perigel.pdf), which contains citations and significant elaboration.
+
+Necessary disclaimer: *I am not a doctor. None of this should be construed as medical advice. Obviously if this project were to be taken to proper clinical trials and the market, it would need significant further development.
+All images were created by my class teammate Dani and were pulled from our project report.*
