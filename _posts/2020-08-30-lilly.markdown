@@ -9,9 +9,6 @@ header:
  teaser: /assets/thumbnails/thumb.lilly.png
 ---
 
-##Summer Internship at Eli Lilly
-
-
 This summer, I worked a medical device engineering internship with Eli Lilly at their Cambridge Innovation Center. Virtually, that is.
 
 This was a very positive work experience for me, despite the challenges of virtualization. It also started off in an amusing way.

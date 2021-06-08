@@ -9,8 +9,6 @@ header:
  teaser: /assets/thumbnails/thumb.glamourshot.png
 ---
 
-##"Telescoping Timmy" or the Robotic Leg Jumping Experiment
-
 
 In the fall of my junior year at MIT (2019), I took 2.74, or Bio-Inspired Robotics. It was a very interesting course.
 

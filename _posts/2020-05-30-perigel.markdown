@@ -9,8 +9,6 @@ header:
  teaser: /assets/thumbnails/thumb.perigel.jpg
 ---
 
-##Perigel: Pericardial Adhesion Barrier Concept
-
 In the Spring of 2020 at MIT, I took 2.782, or *Design of Medical Devices and Implants.*
 
 Sounds about like what I'd be into.
