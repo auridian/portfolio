@@ -1,4 +1,3 @@
-
 ---
 layout: single
 title:  "Building a CNC Mini Mill with the Laboratory for Manufacturing and Productivity during Covid"
